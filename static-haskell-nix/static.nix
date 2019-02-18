@@ -4,6 +4,7 @@ in pkgs.buildFHSUserEnv {
   name = "fhs";
   targetPkgs = pkgs: [
     (pkgs.haskellPackages.ghcWithPackages (p: with p; [ cabal-install ]))
+    pkgs.binutils.bintools
     pkgs.gmp5.static
     pkgs.glibc.static
     pkgs.zlib.static
